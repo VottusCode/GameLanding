@@ -1,0 +1,28 @@
+{
+  "name": "gamelanding",
+  "version": "1.0.0",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url styles/main.scss styles/main.css",
+    "dev": "node-sass --watch --omit-source-map-url styles/main.scss styles/main.css"
+  },
+  "keywords": [
+    "template",
+    "landing",
+    "page",
+    "html",
+    "scss"
+  ],
+  "author": {
+    "name": "Filip Vottus",
+    "email": "vottus@vott.us",
+    "url": "https://vott.us"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "@creativebulma/bulma-badge": "^1.0.1"
+  }
+}

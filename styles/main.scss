@@ -1,0 +1,194 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$footer-height: 6rem;
+
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+$red: #ff0000;
+
+$primary: $red;
+$link: $red;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$family-sans-serif: "Nunito", sans-serif;
+$family-primary: $family-sans-serif;
+
+$body-background-color: #333;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$button-color: #333;
+
+::-webkit-scrollbar {
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
+.header {
+    &>svg {
+        position: absolute;
+        margin-top: -1px;
+    }
+    .hero {
+        .hero-body.with-wave {
+            padding: 0 !important;
+            padding-top: 2rem !important;
+        }
+        &.is-background {
+        background: url(https://wtmw.eu/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        .hero-title {
+            font-family: $family-primary;
+            font-weight: 700;
+            font-size: 4rem;
+        }
+    }
+    .navbar-item:focus {
+        background: #e60000;
+    }
+}
+
+div.body {
+    min-height: calc(100vh - #{$footer-height});
+    div.wtmw-content {
+        margin-top: 20rem;
+        margin-bottom: 15rem;
+
+        section {
+            &.news > .card {
+                margin-bottom: 2rem;
+            }
+            .pagination a {
+                color: #fff;
+                border-color: gray;
+            }
+            &.team {
+                &> .columns {
+                    margin-bottom: 2rem;
+                }
+                .card {
+                    cursor: pointer;
+                    transition: transform 0.2s ease-in-out;
+                }
+                .card:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+span.skull > img {
+    height: 26px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+section h1, .wtmw-title {
+    font-size: 3rem;
+    font-family: $family-primary;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+section h2, .wtmw-sub {
+    font-size: 1.9rem;
+    font-family: $family-primary;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.card.is-dark {
+    color: white !important;
+    background: #2a2a2a;
+    .title {
+        color: white !important;
+    }
+    .subtitle {
+        color: gray
+    }
+    .staff-image {
+        height: 100%;
+        width: unset;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+    .table {
+        background: transparent !important;
+        color: #9c9c9c !important;
+    }
+    th {
+        color: white;
+    }
+    th, td {
+        border-color: gray;
+    }
+    .is-banlist {
+        background: transparent !important;
+        @media (min-width: 900px) {
+            background: #2a2a2a !important;
+        }
+    }
+}
+
+footer.main-footer {
+    position: sticky;
+    margin-top: 5rem;
+    &>svg {
+        position: absolute;
+        bottom: 0;
+    }
+    div.wtmw-footer {
+        background: #2a2a2a;
+        color: #fff;
+        &>.container {
+            &>.footer-inner {
+                padding: $footer-height/2 0;
+
+                &>.columns {
+                    &>.column:nth-child(1) {
+                        p {
+                            font-size: 1.2rem;
+                        }
+                        h1 {
+                            font-size: 2.5rem;
+                            font-weight: bold;
+                        }
+                    }
+                    &>.column:nth-child(2) {
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+                        a {
+                            &:not(:last-child):after {
+                                margin-left: 4px;
+                                margin-right: 4px;
+                                content: " – ";
+                                color: gray;
+                                &:hover {
+                                    color: gray
+                                }
+                            }
+                        }
+                        @media (min-width: 768px) {
+                            & {
+                                text-align: right;
+                            }
+                        }
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@import "../node_modules/bulma/bulma.sass";
